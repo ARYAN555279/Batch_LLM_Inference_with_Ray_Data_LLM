@@ -12,6 +12,7 @@ From Simple to Advanced
               <a href="#14-what-you-want">1.4. What You Want</a><br>
               <a href="#15-how-ray-data-llm-helps">1.5. How Ray Data LLM Helps</a><br>
               <a href="#16-why-use-ray-data-llm">1.6. Why Use Ray Data LLM</a><br>
+              <a href="#17-next-steps">1.7. Next Steps</a><br>
   </div>
 </details>
  
@@ -45,11 +46,6 @@ From Simple to Advanced
               <a href="#43-how-ray-data-llm-helps">4.3. How Ray Data LLM Helps</a><br>
   </div>
 </details>
- 
-
-<div>
-      <a href="#5-summary"><i><b>5. Summary</b></i></a>
-</div>
  
 
 ## 1. Introduction
@@ -117,6 +113,14 @@ Ray Data LLM integrates seamlessly with existing Ray Data pipelines, allowing fo
 * Integration with OpenAI-compatible endpoints
 * Support for popular LLMs like Meta Llama
 
+### 1.7. Next Steps
+
+Ray Data LLM provides a simple and scalable way to perform batch inference using LLMs. Starting from basic chatbot responses to complex sentiment analysis, it enables high-throughput text generation and processing.
+
+* Set up Ray and Ray Data on your system.
+* Follow the provided code examples to implement the discussed problems.
+* Experiment with different models and configurations for better performance.
+
 ## 2. Step 1: Very Simple Problem - Generating Responses to Common Questions
 
 ### 2.1. Problem
@@ -171,12 +175,3 @@ Performing sentiment analysis on each post individually would take too much time
 * Applies the LLM processor to generate sentiment labels.
 * Uses distributed processing to handle large volumes of data efficiently.
 
-## 5. Summary
-
-Ray Data LLM provides a simple and scalable way to perform batch inference using LLMs. Starting from basic chatbot responses to complex sentiment analysis, it enables high-throughput text generation and processing.
-
-Next Steps:
-
-* Set up Ray and Ray Data on your system.
-* Follow the provided code examples to implement the discussed problems.
-* Experiment with different models and configurations for better performance.
