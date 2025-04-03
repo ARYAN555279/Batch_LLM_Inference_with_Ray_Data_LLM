@@ -1,5 +1,8 @@
-# Batch LLM Inference with Ray Data LLM: 
-From Simple to Advanced
+<div align="center">
+    <img src="figures/logo.png" alt="logo" width="50%">
+</div>
+
+# Batch LLM Inference with Ray Data LLM
 
 ## Table of Contents
 
@@ -15,10 +18,9 @@ From Simple to Advanced
               <a href="#17-next-steps">1.7. Next Steps</a><br>
   </div>
 </details>
- 
 
 <details>
-  <summary><a href="#2-step-1-very-simple-problem---generating-responses-to-common-questions"><i><b>2. Step 1: Very Simple Problem - Generating Responses to Common Questions</b></i></a></summary>
+  <summary><a href="#2-fundamental-level-generating-responses-to-common-questions"><i><b>2. Fundamental Level: Generating Responses to Common Questions</b></i></a></summary>
   <div>
               <a href="#21-problem">2.1. Problem</a><br>
               <a href="#22-example-questions">2.2. Example Questions</a><br>
@@ -26,27 +28,24 @@ From Simple to Advanced
               <a href="#24-real-life-example">2.4. Real-Life Example</a><br>
   </div>
 </details>
- 
 
 <details>
-  <summary><a href="#3-step-2-intermediate-problem---text-generation-from-user-prompts"><i><b>3. Step 2: Intermediate Problem - Text Generation from User Prompts</b></i></a></summary>
+  <summary><a href="#3-intermediate-level-text-generation-from-user-prompts"><i><b>3. Intermediate Level: Text Generation from User Prompts</b></i></a></summary>
   <div>
               <a href="#31-problem">3.1. Problem</a><br>
               <a href="#32-example-prompts">3.2. Example Prompts</a><br>
               <a href="#33-why-use-ray-data-llm">3.3. Why Use Ray Data LLM</a><br>
   </div>
 </details>
- 
 
 <details>
-  <summary><a href="#4-step-3-advanced-problem---real-world-use-case"><i><b>4. Step 3: Advanced Problem - Real-World Use Case</b></i></a></summary>
+  <summary><a href="#4-advanced-level-real-world-use-case"><i><b>4. Advanced Level: Real-World Use Case</b></i></a></summary>
   <div>
               <a href="#41-problem">4.1. Problem</a><br>
               <a href="#42-why-batch-processing">4.2. Why Batch Processing</a><br>
               <a href="#43-how-ray-data-llm-helps">4.3. How Ray Data LLM Helps</a><br>
   </div>
 </details>
- 
 
 ## 1. Introduction
 
@@ -121,7 +120,7 @@ Ray Data LLM provides a simple and scalable way to perform batch inference using
 * Follow the provided code examples to implement the discussed problems.
 * Experiment with different models and configurations for better performance.
 
-## 2. Step 1: Very Simple Problem - Generating Responses to Common Questions
+## 2. Fundamental Level: Generating Responses to Common Questions
 
 ### 2.1. Problem
 
@@ -142,11 +141,11 @@ Instead of sending each question to the chatbot separately, batch processing all
 
 Think about a customer support bot that receives thousands of similar questions daily. Instead of answering each one as it arrives, you could collect them and process them all at once, providing quick responses efficiently.
 
-## 3. Step 2: Intermediate Problem - Text Generation from User Prompts
+## 3. Intermediate Level: Text Generation from User Prompts
 
 ### 3.1. Problem
 
-Now imagine you have a list of user prompts for creative text generation. Instead of generating each text separately, you want to create a pipeline that processes all prompts together.
+Now, imagine you have a list of user prompts for creative text generation. Instead of generating each text separately, you want to create a pipeline that processes all prompts together.
 
 #### 3.2. Example Prompts:
 
@@ -159,7 +158,7 @@ Now imagine you have a list of user prompts for creative text generation. Instea
 * You can use Ray Data to load a large number of prompts at once.
 * Ray Data LLM allows you to batch process these prompts with the selected LLM model.
 
-## 4. Step 3: Advanced Problem - Real-World Use Case
+## 4. Advanced Level: Real-World Use Case
 
 ### 4.1. Problem
 
@@ -174,4 +173,3 @@ Performing sentiment analysis on each post individually would take too much time
 * Efficiently loads the dataset.
 * Applies the LLM processor to generate sentiment labels.
 * Uses distributed processing to handle large volumes of data efficiently.
-
