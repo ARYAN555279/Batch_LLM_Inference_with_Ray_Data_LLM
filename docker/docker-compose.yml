@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  ray-head:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: ray-head
+    ports:
+      - "6379:6379"   # Ray client port
+      - "8265:8265"   # Ray dashboard
+      - "10001:10001" # Ray head node
+      - "8000:8000"   # For serving OpenAI-compatible API endpoints
+    volumes:
+      - ../:/app
+      - ray-data:/tmp/ray
+    environment:
+      - RAY_ADDRESS=auto
+    command: >
+      ray start --head
+        --dashboard-host=0.0.0.0
+        --port=6379
+        --dashboard-port=8265
+        --block
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  jupyter:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: ray-jupyter
+    ports:
+      - "8888:8888"  # Jupyter notebook
+    volumes:
+      - ../:/app
+      - ray-data:/tmp/ray
+    environment:
+      - RAY_ADDRESS=ray://ray-head:10001
+    depends_on:
+      - ray-head
+    command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+volumes:
+  ray-data:
+    driver: local 

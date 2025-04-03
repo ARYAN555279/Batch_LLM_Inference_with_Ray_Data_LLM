@@ -1,0 +1,61 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+.env
+.venv
+env/
+ENV/
+
+# Docker
+docker/.dockerignore
+docker/Dockerfile
+docker/docker-compose.yml
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ray
+/tmp/
+ray_bootstrap_key.pem
+ray_bootstrap_config.yaml
+
+# Data and notebooks
+data/large_files/
+*.csv
+*.parquet
+*.arrow
+*.pkl
+*.h5
+.ipynb_checkpoints/
+
+# Logs
+logs/
+*.log 
